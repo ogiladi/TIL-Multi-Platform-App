@@ -1,0 +1,10 @@
+﻿<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+     <item>
+     <color android:color="#253042"/>
+     </item>
+     <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/icon_head"/>
+    </item>
+ </layer-list>

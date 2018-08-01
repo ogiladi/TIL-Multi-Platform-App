@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage Title="Did You Know?"
+             NavigationPage.BackButtonTitle="Back"
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:TILMultiApp"            
+             x:Class="TILMultiApp.WelcomePage">   
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="menu_bar.png" Activated="OpenMenuAsync" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>       
+        <RelativeLayout>        
+            <Image Source="raffael.jpg" 
+                   Aspect="AspectFill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Width,
+                        Factor=1}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=1}"/>
+
+            <Grid Style="{StaticResource GridSpacing}"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Width,
+                        Factor=1}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=1}">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="14*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>                 
+                    <ContentView Grid.Row="1"
+                                 Grid.Column="1"
+                                 Style="{StaticResource HeaderStyle}">
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource TitleStyle}"/>
+                            <Label Style="{StaticResource SubTitleStyle}"/>   
+                        </StackLayout>
+                    </ContentView>
+                    <Button Grid.Row="2"
+                            Grid.Column="1"
+                            x:Name="TellSmthngElse"
+                            Text="Tell Me Something New"
+                            Clicked="SomethingNewAsync"
+                            Style="{StaticResource ButtonStyle}"/>                                                                                                
+                </Grid>           
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>    

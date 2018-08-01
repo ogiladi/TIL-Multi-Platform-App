@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TILMultiApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="backBlue">#b3303f9f</Color>                      
+            <Color x:Key="backToolbar">#303f9f</Color>
+            <Color x:Key="backLight">#b3ffffff</Color>
+            <Color x:Key="fontLight">#b3ffffff</Color>
+            <Color x:Key="fontDark">#b3000000</Color>
+            <Color x:Key="backDark">#253042</Color>
+
+            <OnIdiom x:TypeArguments="x:Double" x:Key="TitleSize" Phone="36" Tablet="60"/>
+            <OnIdiom x:TypeArguments="x:Double" x:Key="SubTitleSize" Phone="12" Tablet="22"/>
+            <OnIdiom x:TypeArguments="x:Double" x:Key="TextSize" Phone="16" Tablet="24"/>
+            <OnIdiom x:TypeArguments="x:Double" x:Key="ButtonTextSize" Phone="16" Tablet="22"/>
+            <OnIdiom x:TypeArguments="Thickness" x:Key="ButtonPad" Phone="10" Tablet="14"/>
+            <OnIdiom x:TypeArguments="Thickness" x:Key="TextPad" Phone="5" Tablet="8"/>
+            <OnIdiom x:TypeArguments="x:Double" x:Key="ButtonHeight" Phone="50" Tablet="80"/>
+            <OnIdiom x:TypeArguments="x:Double" x:Key="MyColSpace" Phone="10" Tablet="18"/>
+            <OnIdiom x:TypeArguments="x:Double" x:Key="MyRowSpace" Phone="10" Tablet="18"/>
+
+            <Style x:Key="ListStyle" TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="{StaticResource backLight}"/>
+                <Setter Property="SeparatorColor" Value="{StaticResource backDark}"/>
+            </Style>
+
+            <Style x:Key="ListLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource fontDark}"/>
+                <Setter Property="FontSize" Value="{StaticResource TextSize}"/>
+                <Setter Property="Margin" Value="{StaticResource ButtonPad}"/>
+            </Style>
+
+            <Style x:Key="ToolbarStyle" TargetType="NavigationPage">  
+                <Setter Property="Title" Value="Did You Know?"/>
+            </Style>
+
+            <Style x:Key="GridSpacing" TargetType="Grid">
+                <Setter Property="ColumnSpacing" Value="{StaticResource MyColSpace}"/>
+                <Setter Property="RowSpacing" Value="{StaticResource MyRowSpace}"/>
+            </Style>
+
+            <Style x:Key="HeaderStyle" TargetType="ContentView">
+                <Setter Property="BackgroundColor" Value="{StaticResource backLight}"/>
+<!--                <Setter Property="Padding" Value="0,0,0,5"/>-->
+            </Style>
+           
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource TitleSize}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Text" Value="Did You Know?"/>
+                <Setter Property="TextColor" Value="{StaticResource fontDark}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="LineBreakMode" Value="NoWrap"/>
+            </Style>
+
+            <Style x:Key="SubTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource SubTitleSize}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Text" Value="Learn something new at a click of a button"/>
+                <Setter Property="TextColor" Value="{StaticResource fontDark}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="TextContainer" TargetType="ContentView">               
+                <Setter Property="BackgroundColor" Value="{StaticResource backLight}"/>
+            </Style>
+
+
+            <Style x:Key="ContentTextStyle" TargetType="Label">
+                <Setter Property="Margin" Value="{StaticResource TextPad}"/>
+                <Setter Property="FontSize" Value="{StaticResource TextSize}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource fontDark}"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle" TargetType="Button">   
+                <Setter Property="HeightRequest" Value="{StaticResource ButtonHeight}"/>
+                <Setter Property="FontSize" Value="{StaticResource ButtonTextSize}"/>
+                <Setter Property="TextColor" Value="{StaticResource fontLight}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource backBlue}"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="BorderRadius" Value="0"/>
+            </Style>   
+
+
+                   
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

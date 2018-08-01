@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="AuxClasses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\iconwhite.png" />
+    <None Remove="Images\raffael_top.jpeg" />
+    <None Remove="Images\clock.png" />
+    <None Remove="Images\icon.png" />
+    <None Remove="Images\iconblack.png" />
+    <None Remove="Images\iconblack.jpg" />
+    <None Remove="Images\raffael.jpg" />
+    <None Remove="Images\raffael_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\MasterMenuPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Resources\Resources.Designer.cs" />
+    <Compile Remove="MarkupExtensions\EmbeddedImage.cs" />
+    <Compile Remove="EmptyClass.cs" />
+    <Compile Remove="Views\MasterMenuPage.xaml.cs" />
+    <Compile Remove="MenuSheet.cs" />
+    <Compile Remove="AuxClasses\PostList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\strings.Designer.cs">
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
